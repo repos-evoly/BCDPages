@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Account</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+      }
+      .header {
+        background-color: #28a745;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        height: 50px; /* Adjusted to fit two lines */
+      }
+
+      .header p {
+        color: #fff;
+        display: inline-block;
+        margin-right: 50px; /* Space between the paragraphs */
+        animation: scrollText 6s linear infinite;
+      }
+
+      @keyframes scrollText {
+        0% {
+          transform: translateX(100%);
+        }
+        50% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: calc(100vh - 30px); /* Adjust for header height */
+        padding: 20px;
+      }
+
+      .container {
+        text-align: center;
+        max-width: 320px;
+        width: 100%;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo {
+        margin: 0 auto 16px;
+        width: 80px;
+        height: 80px;
+      }
+
+      h2 {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 8px;
+      }
+
+      p {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 16px;
+      }
+
+      .message {
+        color: #28a745;
+        font-weight: 600;
+        opacity: 0.9;
+        margin-bottom: 16px;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        font-size: 14px;
+      }
+
+      input[type="text"]:focus {
+        outline: none;
+        border-color: #28a745;
+      }
+
+      button {
+        width: 100%;
+        background-color: #28a745;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+      }
+
+      button:hover {
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <p>
+        Download the digital bank application and enjoy a seamless and reliable
+        experience.
+      </p>
+      <p>
+        The customer service center is ready to respond to your inquiries and
+        provide assistance.
+      </p>
+      <p>Access all your banking services through AI via WABS.</p>
+    </div>
+
+    <div class="main">
+      <div class="container">
+        <img src="logo.png" alt="Logo" class="logo" />
+        <h2>We're sorry to see you leaving</h2>
+        <p>
+          Deleting your BCD account will remove all your information from our
+          database. This cannot be undone.
+        </p>
+
+        <p id="message" class="message" style="display: none">
+          Your delete account request has been sent!
+        </p>
+
+        <input type="text" id="username" placeholder="username" />
+        <button onclick="handleContinueClick()">Continue</button>
+      </div>
+    </div>
+
+    <script>
+      function handleContinueClick() {
+        const message = document.getElementById("message");
+        message.style.display = "block";
+      }
+    </script>
+  </body>
+</html>
